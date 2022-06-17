@@ -15,10 +15,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor //constructor con argumentos
 @NoArgsConstructor //constructor vacío
 @Data //crea getters y setters
-
 public class ExperienciaLaboral
 {
-        @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @NotNull //el campo no puede estar vacío
 	public Long idExperiencia;
@@ -30,7 +29,7 @@ public class ExperienciaLaboral
         
 	public Long idEmpleo;
         
-        @ManyToOne(cascade= CascadeType.PERSIST)
+        @ManyToOne(cascade = CascadeType.PERSIST)
         @JoinColumn(name = "idPersona")
         private Persona persona;
 
@@ -45,4 +44,8 @@ public class ExperienciaLaboral
 		this.idEmpleo = idEmpleo_;
                 this.persona = persona;
 	}
+
+    public void getPersona(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
