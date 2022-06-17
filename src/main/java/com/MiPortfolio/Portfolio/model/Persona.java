@@ -33,9 +33,6 @@ public class Persona {
     @OneToMany(fetch = FetchType.EAGER,mappedBy="persona",cascade = CascadeType.ALL)
     private List<ExperienciaLaboral> experienciaLaboral;
 
-    public Persona() {
-    }
-
     public Persona(Long id, String nombre, String apellido, String sobreMi, String provincia, Set<ExperienciaLaboral> experienciaLaboral) {
         this.id = id;
         this.nombre = nombre;
