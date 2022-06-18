@@ -1,0 +1,100 @@
+2022-06-18T15:03:58.250380+00:00 app[web.1]: at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.7.jar!/:2.6.7]
+2022-06-18T15:03:58.250380+00:00 app[web.1]: at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.7.jar!/:2.6.7]
+2022-06-18T15:03:58.250383+00:00 app[web.1]: at com.MiPortfolio.Portfolio.PortfolioApplication.main(PortfolioApplication.java:10) ~[classes!/:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.250383+00:00 app[web.1]: at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+2022-06-18T15:03:58.250383+00:00 app[web.1]: at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+2022-06-18T15:03:58.250383+00:00 app[web.1]: at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Portfolio-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.250383+00:00 app[web.1]: at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[Portfolio-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.250384+00:00 app[web.1]: at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Portfolio-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.250384+00:00 app[web.1]: at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[Portfolio-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.250384+00:00 app[web.1]: 
+2022-06-18T15:03:58.251094+00:00 app[web.1]: 2022-06-18 15:03:58.250  WARN 4 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1045, SQLState: 28000
+2022-06-18T15:03:58.251214+00:00 app[web.1]: 2022-06-18 15:03:58.251 ERROR 4 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Access denied for user 'ungpm86oxpobnaig'@'ec2-34-228-56-252.compute-1.amazonaws.com' (using password: YES)
+2022-06-18T15:03:58.255224+00:00 app[web.1]: 2022-06-18 15:03:58.255 ERROR 4 --- [           main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-06-18T15:03:58.255530+00:00 app[web.1]: 2022-06-18 15:03:58.255  WARN 4 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-06-18T15:03:58.256790+00:00 app[web.1]: 2022-06-18 15:03:58.256  INFO 4 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-18T15:03:58.266620+00:00 app[web.1]: 2022-06-18 15:03:58.266  INFO 4 --- [           main] ConditionEvaluationReportLoggingListener :
+2022-06-18T15:03:58.266621+00:00 app[web.1]: 
+2022-06-18T15:03:58.266622+00:00 app[web.1]: Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-18T15:03:58.284225+00:00 app[web.1]: 2022-06-18 15:03:58.283 ERROR 4 --- [           main] o.s.boot.SpringApplication               : Application run failed
+2022-06-18T15:03:58.284226+00:00 app[web.1]: 
+2022-06-18T15:03:58.284239+00:00 app[web.1]: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-06-18T15:03:58.284240+00:00 app[web.1]: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284240+00:00 app[web.1]: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284240+00:00 app[web.1]: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284241+00:00 app[web.1]: at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284241+00:00 app[web.1]: at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284241+00:00 app[web.1]: at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284242+00:00 app[web.1]: at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284242+00:00 app[web.1]: at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284242+00:00 app[web.1]: at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284242+00:00 app[web.1]: at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284243+00:00 app[web.1]: at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.7.jar!/:2.6.7]
+2022-06-18T15:03:58.284243+00:00 app[web.1]: at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.7.jar!/:2.6.7]
+2022-06-18T15:03:58.284243+00:00 app[web.1]: at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.7.jar!/:2.6.7]
+2022-06-18T15:03:58.284244+00:00 app[web.1]: at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.7.jar!/:2.6.7]
+2022-06-18T15:03:58.284244+00:00 app[web.1]: at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.7.jar!/:2.6.7]
+2022-06-18T15:03:58.284244+00:00 app[web.1]: at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.7.jar!/:2.6.7]
+2022-06-18T15:03:58.284244+00:00 app[web.1]: at com.MiPortfolio.Portfolio.PortfolioApplication.main(PortfolioApplication.java:10) ~[classes!/:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.284244+00:00 app[web.1]: at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+2022-06-18T15:03:58.284245+00:00 app[web.1]: at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+2022-06-18T15:03:58.284245+00:00 app[web.1]: at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[Portfolio-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.284245+00:00 app[web.1]: at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[Portfolio-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.284246+00:00 app[web.1]: at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[Portfolio-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.284246+00:00 app[web.1]: at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[Portfolio-0.0.1-SNAPSHOT.jar:0.0.1-SNAPSHOT]
+2022-06-18T15:03:58.284252+00:00 app[web.1]: Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-06-18T15:03:58.284255+00:00 app[web.1]: at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284256+00:00 app[web.1]: at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284256+00:00 app[web.1]: at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284256+00:00 app[web.1]: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284257+00:00 app[web.1]: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284257+00:00 app[web.1]: ... 22 common frames omitted
+2022-06-18T15:03:58.284258+00:00 app[web.1]: Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+2022-06-18T15:03:58.284258+00:00 app[web.1]: at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284259+00:00 app[web.1]: at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284259+00:00 app[web.1]: at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284259+00:00 app[web.1]: at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284260+00:00 app[web.1]: at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284260+00:00 app[web.1]: at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284261+00:00 app[web.1]: at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284261+00:00 app[web.1]: at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:559) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284262+00:00 app[web.1]: at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284262+00:00 app[web.1]: at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:68) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284262+00:00 app[web.1]: at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:220) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284262+00:00 app[web.1]: at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:123) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284263+00:00 app[web.1]: at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:196) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284263+00:00 app[web.1]: at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284263+00:00 app[web.1]: at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284264+00:00 app[web.1]: at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284264+00:00 app[web.1]: at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284264+00:00 app[web.1]: at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284267+00:00 app[web.1]: at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284268+00:00 app[web.1]: at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.19.jar!/:5.3.19]
+2022-06-18T15:03:58.284268+00:00 app[web.1]: ... 26 common frames omitted
+2022-06-18T15:03:58.284268+00:00 app[web.1]: Caused by: java.sql.SQLException: Access denied for user 'ungpm86oxpobnaig'@'ec2-34-228-56-252.compute-1.amazonaws.com' (using password: YES)
+2022-06-18T15:03:58.284269+00:00 app[web.1]: at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129) ~[mysql-connector-java-8.0.28.jar!/:8.0.28]
+2022-06-18T15:03:58.284269+00:00 app[web.1]: at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.28.jar!/:8.0.28]
+2022-06-18T15:03:58.284269+00:00 app[web.1]: at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:829) ~[mysql-connector-java-8.0.28.jar!/:8.0.28]
+2022-06-18T15:03:58.284269+00:00 app[web.1]: at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449) ~[mysql-connector-java-8.0.28.jar!/:8.0.28]
+2022-06-18T15:03:58.284270+00:00 app[web.1]: at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:242) ~[mysql-connector-java-8.0.28.jar!/:8.0.28]
+2022-06-18T15:03:58.284270+00:00 app[web.1]: at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.28.jar!/:8.0.28]
+2022-06-18T15:03:58.284270+00:00 app[web.1]: at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-4.0.3.jar!/:na]
+2022-06-18T15:03:58.284270+00:00 app[web.1]: at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364) ~[HikariCP-4.0.3.jar!/:na]
+2022-06-18T15:03:58.284271+00:00 app[web.1]: at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-4.0.3.jar!/:na]
+2022-06-18T15:03:58.284271+00:00 app[web.1]: at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476) ~[HikariCP-4.0.3.jar!/:na]
+2022-06-18T15:03:58.284271+00:00 app[web.1]: at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-4.0.3.jar!/:na]
+2022-06-18T15:03:58.284271+00:00 app[web.1]: at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) ~[HikariCP-4.0.3.jar!/:na]
+2022-06-18T15:03:58.284272+00:00 app[web.1]: at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-4.0.3.jar!/:na]
+2022-06-18T15:03:58.284272+00:00 app[web.1]: at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284272+00:00 app[web.1]: at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284273+00:00 app[web.1]: at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44) ~[hibernate-core-5.6.8.Final.jar!/:5.6.8.Final]
+2022-06-18T15:03:58.284273+00:00 app[web.1]: ... 42 common frames omitted
+2022-06-18T15:03:58.284273+00:00 app[web.1]: 
+2022-06-18T15:03:58.435696+00:00 heroku[web.1]: Process exited with status 1
+2022-06-18T15:03:58.546218+00:00 heroku[web.1]: State changed from starting to crashed
+2022-06-18T15:44:12.901244+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=safe-coast-82454.herokuapp.com request_id=8df73cf6-e3c5-4b28-b1d2-3202c8880036 fwd="186.22.56.131" dyno= connect= service= status=503 bytes= protocol=https
+2022-06-18T15:44:13.219933+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=safe-coast-82454.herokuapp.com request_id=b0cb156f-1d58-49bd-a3cd-f25715bdfb43 fwd="186.22.56.131" dyno= connect= service= status=503 bytes= protocol=https
+2022-06-18T15:58:46.622333+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=safe-coast-82454.herokuapp.com request_id=c406ba9f-570f-44e1-a9fb-03a79b29a0f4 fwd="186.22.56.131" dyno= connect= service= status=503 bytes= protocol=https
+2022-06-18T15:58:46.933197+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=safe-coast-82454.herokuapp.com request_id=b397a822-0fa0-4d56-9da5-041a0cdbf0bc fwd="186.22.56.131" dyno= connect= service= status=503 bytes= protocol=https
+2022-06-18T16:06:09.070453+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=safe-coast-82454.herokuapp.com request_id=efc8a3cd-e495-4868-9066-f9fd599f4f9f fwd="186.22.56.131" dyno= connect= service= status=503 bytes= protocol=https
+2022-06-18T16:06:09.404441+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=safe-coast-82454.herokuapp.com request_id=a360feaa-3276-4a63-8151-be6e3741e5d5 fwd="186.22.56.131" dyno= connect= service= status=503 bytes= protocol=https
