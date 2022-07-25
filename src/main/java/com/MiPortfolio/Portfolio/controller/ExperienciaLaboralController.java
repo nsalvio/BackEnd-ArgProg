@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +29,7 @@ public class ExperienciaLaboralController {
     @Autowired
     private ExperienciaService experienciaService;
 
-    @PutMapping("/new") //agrega experiencia mediante la búsqueda de Persona por id
+    @PostMapping("/new") //agrega experiencia mediante la búsqueda de Persona por id
     public void agregarExperienciaLaboral(@PathVariable Long idPersona,
             @RequestBody com.MiPortfolio.Portfolio.model.ExperienciaLaboral exp) {
         Persona personaGuardada = personaService.findPersona(idPersona);
@@ -49,7 +50,7 @@ public class ExperienciaLaboralController {
         
         for (Iterator<ExperienciaLaboral> iterator = experiencia.iterator(); iterator.hasNext();) {
             ExperienciaLaboral next = iterator.next();
-            next.getPersona(null);
+            next.setPersona(null);
         }
         
         return experiencia;
@@ -61,12 +62,14 @@ public class ExperienciaLaboralController {
             @PathVariable Long idPersona,
             @PathVariable Long id) {
         ExperienciaLaboral experiencia = experienciaService.findExperienciaLaboral(id);
-        experiencia.getPersona(null);
+        experiencia.setPersona(null);
         return experiencia;
     }
 
     @DeleteMapping("/delete/{id}")//borra experiencia mediante el id de Persona
-    public void deleteExperienciaLaboral(@PathVariable Long id) {
+    public void deleteExperienciaLaboral(
+            @PathVariable Long idPersona,
+            @PathVariable Long id) {
         experienciaService.borrarExperienciaLaboral(id);
     }
 }

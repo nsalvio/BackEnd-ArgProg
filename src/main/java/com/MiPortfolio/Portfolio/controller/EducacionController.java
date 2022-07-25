@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +29,7 @@ public class EducacionController {
     @Autowired
     private EducacionService educacionService;
 
-    @PutMapping("/new") //agrega educación mediante la búsqueda de Persona por id
+    @PostMapping("/new") //agrega educación mediante la búsqueda de Persona por id
     public void agregarEducacion(@PathVariable Long idPersona,
             @RequestBody com.MiPortfolio.Portfolio.model.Educacion edu) {
         Persona personaGuardada = personaService.findPersona(idPersona);

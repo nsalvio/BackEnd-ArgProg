@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("persona/{idPersona}/Proyecto")
+@RequestMapping("persona/{idPersona}/proyecto")
 @CrossOrigin(origins = "*")
 public class ProyectoController {
     
@@ -28,19 +29,24 @@ public class ProyectoController {
     @Autowired
     private ProyectoService proyectoService;
 
-    @PutMapping("/new") //agrega proyecto mediante la búsqueda de Persona por id
-    public void agregarProyecto(@PathVariable Long idPersona,
+    /*@PostMapping("/new") //agrega proyecto mediante la búsqueda de Persona por id
+    public Proyecto agregarProyecto(@PathVariable Long idPersona,
             @RequestBody com.MiPortfolio.Portfolio.model.Proyecto pro) {
+        
         Persona personaGuardada = personaService.findPersona(idPersona);
 
         if (personaGuardada == null) {
-            return;
+            return; 
         }
 
-        pro.getPersona(personaGuardada);
+        pro.setPersona(personaGuardada);
 
         proyectoService.saveProyecto (pro);
-    }
+        
+        pro.setPersona(null);
+        
+        return pro;
+    }*/
 
     @GetMapping("/ver") //busca y trae proyecto de Persona
     @ResponseBody
@@ -49,7 +55,7 @@ public class ProyectoController {
         
         for (Iterator<Proyecto> iterator = proyecto.iterator(); iterator.hasNext();) {
             Proyecto next = iterator.next();
-            next.getPersona(null);
+            next.setPersona(null);
         }
         
         return proyecto;
@@ -61,7 +67,7 @@ public class ProyectoController {
             @PathVariable Long idPersona,
             @PathVariable Long id) {
         Proyecto proyecto = proyectoService.findProyecto(id);
-        proyecto.getPersona(null);
+        proyecto.setPersona(null);
         return proyecto;
     }
 

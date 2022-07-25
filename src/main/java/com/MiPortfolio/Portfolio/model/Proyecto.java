@@ -24,13 +24,11 @@ public class Proyecto {
     @GeneratedValue(strategy = GenerationType.AUTO) //generacion de P.Key automática
     @NotNull //el campo no puede estar vacío
     
-    private Long id;
+    private Long idProyecto;
     private String nombreDelProyecto;
     private java.sql.Date fechaDeRealizacion;
     private String descripcion;
     private String link;
-    
-    public Long idProyecto;
     
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "idPersona")
@@ -43,9 +41,4 @@ public class Proyecto {
     this.descripcion = descripcion;
     this.link = link;
     }
-
-    public void getPersona(Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
 }

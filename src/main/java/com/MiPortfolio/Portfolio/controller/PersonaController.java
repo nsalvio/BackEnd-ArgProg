@@ -45,6 +45,8 @@ public class PersonaController {
         pers.setEducacion(null);
         pers.setSkills(null);
         
+        pers.setProyecto(null);
+        
         return pers;
     }
     
@@ -69,6 +71,11 @@ public class PersonaController {
     personaGuardada.setProvinciaYPais(pers.getProvinciaYPais());
    
     personaService.savePersona(personaGuardada);
+    
+    personaGuardada.setExperienciaLaboral(null);
+    personaGuardada.setEducacion(null);
+    personaGuardada.setSkills(null);
+    personaGuardada.setProyecto(null);
    
     return personaGuardada;
     
