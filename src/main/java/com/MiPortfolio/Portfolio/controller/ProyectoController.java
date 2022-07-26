@@ -29,14 +29,14 @@ public class ProyectoController {
     @Autowired
     private ProyectoService proyectoService;
 
-    /*@PostMapping("/new") //agrega proyecto mediante la búsqueda de Persona por id
+    @PostMapping("/new") //agrega proyecto mediante la búsqueda de Persona por id
     public Proyecto agregarProyecto(@PathVariable Long idPersona,
             @RequestBody com.MiPortfolio.Portfolio.model.Proyecto pro) {
         
         Persona personaGuardada = personaService.findPersona(idPersona);
 
         if (personaGuardada == null) {
-            return; 
+            return null; 
         }
 
         pro.setPersona(personaGuardada);
@@ -46,7 +46,7 @@ public class ProyectoController {
         pro.setPersona(null);
         
         return pro;
-    }*/
+    }
 
     @GetMapping("/ver") //busca y trae proyecto de Persona
     @ResponseBody
